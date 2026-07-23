@@ -1,0 +1,26 @@
+---
+title: "Lecture_2"
+output: html_document
+---
+
+## Notes about assigned Readings
+```{r, eval=FALSE}
+- [ ] Huntington-Klein, N. – Chapter 2
+https://theeffectbook.net/ch-ResearchQuestions.html
+Table of Contents
+- [x] ﻿﻿﻿2.1 What Is a Research Question?
+* a research question is a question that can be answered, and for which having that answer will improve your understanding of how the world works.
+- [x] ﻿﻿﻿2.2 Why Start with a Question?
+* Without a disciplined research question, there’s no reason not to just check everything! Something is going to pop up as related by random chance if you check enough stuff. 
+- [x] ﻿﻿﻿2.3 Where Do Research Questions Come From?
+* Research questions can come from lots of places. Mostly, curiosity. We want to know how the world works, and that naturally leads to questions!
+* There are two steps in this process: thinking about theory, and coming up with a research question. Either one can come first.
+- [x] ﻿2.4 How Do You Know if You've Got a Good One?
+* First, consider the potential answers you might get. Then, imagine what kind of sense you’d make of that result, or what conclusion you would draw.
+```
+
+## Notes from lecture
+- You can find a statistical realtionship in pretty much anything. 
+- 
+
+
