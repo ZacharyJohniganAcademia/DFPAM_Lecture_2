@@ -37,10 +37,9 @@ for (p in package.list){
 getwd() 
 
 ## set up working directories
-
-my_directory     <- "/Users/aidapacheco-applegate/Desktop/PhD/Summer 2026/Data for Policy Analysis/"
-# my_data        <- paste0(my_directory, "Data/")
-# output_dir     <- paste0(my_directory, "Classes/Class 1/")
+my_directory     <- "/Users/zacharyjohnigan/Library/CloudStorage/OneDrive-TheUniversityofChicago/UChicago Student/Quarter 8 - Summer 2026/2 Data For Policy Analys:Mgmt/Week 1/DFPAM_Lecture_2/DFPAM_Lecture_2"
+my_data        <- paste0(my_directory, "/Data/")
+output_dir     <- paste0(my_directory, "Classes/Class 1/")
 
 #------------------------------------------------------------------------------#
 # 2. Load dataset
@@ -50,7 +49,7 @@ my_directory     <- "/Users/aidapacheco-applegate/Desktop/PhD/Summer 2026/Data f
 # format we just need to use the line 52 of this code to load it into our work 
 # environment)
 
-load("/Users/aidapacheco-applegate/Desktop/PhD/Summer 2026/Data for Policy Analysis/Data/37941-0005-Data.rda")
+load("/Users/zacharyjohnigan/Library/CloudStorage/OneDrive-TheUniversityofChicago/UChicago Student/Quarter 8 - Summer 2026/2 Data For Policy Analys:Mgmt/Week 1/DFPAM_Lecture_2/DFPAM_Lecture_2/1_Data/37941-0005-Data.rda")
 
 ## To import .CSV files use this code
 ## data <- read.csv("[full directory here]")
@@ -82,7 +81,7 @@ str(da37941.0005$WF9_WORK_WAGE)
 tabulate(da37941.0005$WF9_WORK_WAGE)
 
 # Summarize variables
-summary(da37941.0005$WF9_CHAR_EDUC) # this create a table of counts for each category of the variable (if variable is categorical) OR a table with summary statistics (if variable is numeric). 
+summary(da37941.0005$WF9_CHAR_EDUC) # this creates a table of counts for each category of the variable (if variable is categorical) OR a table with summary statistics (if variable is numeric). 
 
 #------------------------------------------------------------------------------#
 # 4. Basic cleaning and manipulation
@@ -96,11 +95,15 @@ nsece_2019_wf <- da37941.0005
 # (this way of writing code is typical of the library dplyr. We always start with an arrow "<-" and then follow the rest of the code with "%>%")
 
 nsece_2019_wf_subset <- # this line is creating a new dataset that contain all the manipulation performed in the following lines
+  library(dplyr)
   nsece_2019_wf %>% # this is the data source of the new data that I will create (the name of the "old" data)
   select(WF9_CHAR_EDUC, WF9_CHAR_HISP, WF9_CHAR_GENDER, WF9_WORK_WAGE) # the command "select" indicates that I will only work for the variables listed here. No other variables will be included in the new dataset
 
-# Rename variables
+# What the code should actually look like, maybe ;-P
+nsece_2019_wf %>% select(WF9_CHAR_EDUC, WF9_CHAR_HISP, WF9_CHAR_GENDER, WF9_WORK_WAGE)  
 
+# ??? Stopped here, got error  
+# Rename variables
 nsece_2019_wf_rename <- # this line is creating a new dataset 
   nsece_2019_wf_subset %>% # this is the "old data"
   rename(educ_level = WF9_CHAR_EDUC, #the following lines rename variables 
